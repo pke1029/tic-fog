@@ -23,16 +23,12 @@ fog = {
 	cls = function(color)
 		color = color or 0
 		local val = color + (color << 4)
-		for i = 0,16319 do
-			poke(0xbfc0+i, val)
-		end
+		memset(0xbfc0, val, 16320)
 	end,
 
 	show = function(colorkey)
 		if colorkey == nil or colorkey == -1 then
-			for i = 0,16319 do
-				poke(i, peek(0xbfc0+i))
-			end
+			memcpy(0, 0xbfc0, 16320)
 			return
 		else
 			for i = 0,32639 do
@@ -45,9 +41,7 @@ fog = {
 	end,
 
 	prtSc = function()
-		for i = 0,16319 do
-			poke(0xbfc0+i, peek(i))
-		end
+		memcpy(0xbfc0, 0, 16320)
 	end,
 
 	hLine = function(x, y, w, color)
@@ -86,6 +80,6 @@ fog = {
 		end
 	end,
 
-	--TODO: line, tri, spr, multiply
+	--TODO: line, tri, spr, multiply, map
 
 }
