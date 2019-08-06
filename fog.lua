@@ -119,9 +119,9 @@ fog = {
 			i = i + 1
 			if d > 0 then
 				j = j - 1
-				d = d + 4 * (i - j) + 10
+				d = d + 4 * (i - j) + 2
 			else
-				d = d + 4 * i + 6
+				d = d + 4 * i + 2
 			end
 		end
 	end,
