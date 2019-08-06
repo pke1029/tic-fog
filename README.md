@@ -1,9 +1,11 @@
-# tic-fog
+# Tic-Fog
 TIC-80 layer management library.
 
 ![](demo.gif)
 
 Check out the demo [here](https://tic.computer/play?cart=913).
+
+# Introduction
 
 Ever wanted to draw anti-circle? Or somekind of layering system in TIC? If so, this is the library for you! Simply copy the fog table and you are set to go!
 
